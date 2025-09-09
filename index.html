@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Maison de Lumière — когда свет становится искусством</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f0eb;
+      color: #2e2e2e;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #fffdfa;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #5c3a3a;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-style: italic;
+      color: #3b2f2f;
+      margin-bottom: 30px;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1607082349564-9e3b1c5e6c5f?q=80&w=1200&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero button {
+      background-color: #5c3a3a;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #5c3a3a;
+    }
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fffdfa;
+      border: 1px solid #e5ddd5;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #3b2f2f;
+    }
+    .card p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    .card button {
+      background-color: #c2a87b;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #2e2e2e;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .contact-form button {
+      background-color: #5c3a3a;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #fffdfa;
+      color: #3b2f2f;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Maison de Lumière</h1>
+    <div class="tagline">когда свет становится искусством</div>
+  </header>
+
+  <div class="hero">
+    <button onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">ПЕРЕЙТИ В КАТАЛОГ</button>
+  </div>
+
+  <section id="catalog">
+    <h2>Наши ароматы</h2>
+    <div class="catalog">
+      <div class="card">
+        <h3>Дубовый Мох и Янтарь</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
+      </div>
+      <div class="card">
+        <h3>Черное Море</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
+      </div>
+      <div class="card">
+        <h3>День в Спа</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
+      </div>
+      <div class="card">
+        <h3>Морская Соль и Орхидея</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div>
+      </div>
+      <div class="card">
+        <h3>Кашемировая Слива</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div>
+      </div>
+      <div class="card">
+        <h3>Черная Вишня Мерло</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div>
+      </div>
+      <div class="card">
+        <h3>Манго и Кокосовое Молоко</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div>
+      </div>
+      <div class="card">
+        <h3>Библиотека</h3>
+        <p>220 мл — 1500 ₽</p>
+        <p>500 мл — 3000 ₽</p>
+        <button onclick="toggleInfo(this)">Подробнее</button>
+        <div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div>
+      </div>
+      <div class="card">
+        <h3>Коньячная Груша</h3>
+        <p>220 мл — 150
