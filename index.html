@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Maison de Lumière — когда свет становится искусством</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f0eb;
+      color: #2e2e2e;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #fffdfa;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #5c3a3a;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-style: italic;
+      color: #3b2f2f;
+      margin-bottom: 30px;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1607082349564-9e3b1c5e6c5f?q=80&w=1200&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero button {
+      background-color: #5c3a3a;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #5c3a3a;
+    }
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fffdfa;
+      border: 1px solid #e5ddd5;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #3b2f2f;
+    }
+    .card p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    .card button {
+      background-color: #c2a87b;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #2e2e2e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Maison de Lumière</h1>
+    <div class="tagline">когда свет становится искусством</div>
+  </header>
+
+  <div class="hero">
+    <button onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">ПЕРЕЙТИ В КАТАЛОГ</button>
+  </div>
+
+  <section id="catalog">
+    <h2>Наши ароматы</h2>
+    <section id="catalog">
+  <h2>Наши ароматы</h2>
+  <div class="catalog">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607082349564-9e3b1c5e6c5f?q=80&w=600" alt="Дубовый Мох и Янтарь" style="width:100%; border-radius:8px; margin-bottom:10px;">
+      <h3>Дубовый Мох и Янтарь</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607082349564-9e3b1c5e6c5f?q=80&w=600" alt="Черное Море" style="width:100%; border-radius:8px; margin-bottom:10px;">
+      <h3>Черное Море</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607082349564-9e3b1c5e6c5f?q=80&w=600" alt="День в Спа" style="width:100%; border-radius:8px; margin-bottom:10px;">
+      <h3>День в Спа</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
+    </div>
+
+    <!-- Добавь остальные карточки по аналогии -->
+  </div>
+</section>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>О бренде</h2>
+    <p>
+      Maison de Lumière — это пространство, где свет встречается с ароматом, а каждый момент наполняется смыслом.
+      Мы создаём свечи как произведения искусства: с благородными нотами, изысканным дизайном и вниманием к деталям.
+      Это не просто аромат — это атмосфера, которая говорит о вкусе, внутренней гармонии и стремлении к красоте.
+      Каждая свеча — как приглашение замедлиться, вдохнуть глубже и почувствовать себя дома, где свет — это эмоция.
+    </p>
+  </section>
+
+  <section id="gifts">
+    <h2>Подарочные наборы</h2>
+    <p>
+      Все свечи доступны в подарочной упаковке: плотная коробка с шелковой лентой и открыткой.
+      Вы можете добавить персональную надпись — мы напечатаем её вручную на карточке.
+    </p>
+    <p><strong>Персонализация:</strong> имя, пожелание, дата — всё, что сделает подарок личным.</p>
+  </section>
+
+  <section id="shipping">
+    <h2>Доставка и оплата</h2>
+    <ul>
+      <li>📦 Доставка по России и СНГ — 3–10 дней</li>
+      <li>💳 Оплата по СБП — после оформления заказа мы отправим QR-код</li>
+      <li>🎁 Упаковка готова к вручению — минимализм и надёжность</li>
+    </ul>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <ul>
+      <li>📞 Телефон: <a href="tel:+79920047084">+7 992 004-70-84</a></li>
+      <li>📧 Email: <a href="mailto:dan182003@yandex.ru">dan182003@yandex.ru</a></li>
+      <li>📷 Instagram: <a href="https://instagram.com/d_danyaa_aa" target="_blank">@d_danyaa_aa</a></li>
+    </ul>
+    <h3>Форма обратной связи</h3>
+    <form class="contact-form" onsubmit="return submitForm()">
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Maison de Lumière — свет как искусство
+  </footer>
+
+  <script>
+    function toggleInfo(button) {
+      const info = button.nextElementSibling;
+      info.style.display = info.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function submitForm() {
+      alert("Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.");
+      return false;
+    }
+  </script>
+</body>
+</html>
