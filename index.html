@@ -9,69 +9,45 @@
       scroll-behavior: smooth;
     }
     body {
-  background-color: #fdf6f0;
-  color: #3b3b3b;
-}
-
-header, nav {
-  background-color: #f7e9dc;
-}
-
-h1, h2 {
-  color: #4b2e2e;
-}
-
-.card {
-  background-color: #fffaf7;
-  border: 1px solid #e5ddd5;
-}
-
-.card button {
-  background-color: #c89f7b;
-  color: white;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(163, 108, 79, 0.2);
-}
-
-nav a:hover {
-  color: #a36c4f;
-}
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fdf6f0;
+      color: #3b3b3b;
+      padding-top: 160px;
+    }
     header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 180px;
+      position: fixed;
+      top: 0;
+      width: 100%;
       background-color: #fffdfa;
+      z-index: 1000;
+      text-align: center;
+      padding: 20px 0 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 32px;
+      font-size: 28px;
       color: #5c3a3a;
       margin: 0;
     }
     .tagline {
       font-style: italic;
       color: #3b2f2f;
-      margin-top: 10px;
+      font-size: 14px;
+      margin-top: 5px;
     }
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #fffdfa;
-      padding: 10px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      z-index: 1000;
-      text-align: center;
+      margin-top: 10px;
     }
     nav a {
-      margin: 0 15px;
+      margin: 0 12px;
       color: #5c3a3a;
       text-decoration: none;
       font-weight: bold;
+    }
+    nav a:hover {
+      color: #a36c4f;
     }
     section {
       min-height: 100vh;
@@ -89,7 +65,7 @@ nav a:hover {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
       margin-bottom: 20px;
-      color: #5c3a3a;
+      color: #4b2e2e;
     }
     .catalog {
       display: grid;
@@ -97,7 +73,7 @@ nav a:hover {
       gap: 20px;
     }
     .card {
-      background-color: #fffdfa;
+      background-color: #fffaf7;
       border: 1px solid #e5ddd5;
       border-radius: 12px;
       padding: 20px;
@@ -105,7 +81,7 @@ nav a:hover {
       transition: all 0.3s ease;
     }
     .card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(163, 108, 79, 0.2);
     }
     .card h3 {
       margin-top: 0;
@@ -117,13 +93,14 @@ nav a:hover {
       font-size: 14px;
     }
     .card button {
-      background-color: #c2a87b;
+      background-color: #c89f7b;
       border: none;
       padding: 8px 12px;
       border-radius: 6px;
       cursor: pointer;
       font-size: 14px;
       margin-top: 10px;
+      color: white;
     }
     .card img {
       width: 100%;
@@ -164,116 +141,33 @@ nav a:hover {
 </head>
 <body>
 
-  <header style="text-align: center; padding: 40px 20px 20px; background-color: #fffdfa;">
-  <a href="/" style="text-decoration: none;">
-    <h1 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #5c3a3a; margin-bottom: 10px;">
-      Maison de Lumière
-    </h1>
-  </a>
-  <div class="tagline" style="font-style: italic; color: #3b2f2f; margin-bottom: 20px;">
-    когда свет становится искусством
-  </div>
-  <nav style="margin-top: 10px;">
-    <a href="#catalog" style="margin: 0 12px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Каталог</a>
-    <a href="#about" style="margin: 0 12px; color: #5c3a3a; text-decoration: none; font-weight: bold;">О бренде</a>
-    <a href="#gifts" style="margin: 0 12px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Подарки</a>
-    <a href="#shipping" style="margin: 0 12px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Доставка</a>
-    <a href="#contacts" style="margin: 0 12px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Контакты</a>
-  </nav>
-</header>
+  <header>
+    <a href="/" style="text-decoration: none;">
+      <h1>Maison de Lumière</h1>
+    </a>
+    <div class="tagline">когда свет становится искусством</div>
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#about">О бренде</a>
+      <a href="#gifts">Подарки</a>
+      <a href="#shipping">Доставка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
   <section id="catalog">
     <h2>Наши ароматы</h2>
     <div class="catalog">
-      <div class="card">
-  <img src="1.jpg" alt="Дубовый Мох и Янтарь">
-  <h3>Дубовый Мох и Янтарь</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
-</div>
-
-<div class="card">
-  <img src="2.jpg" alt="Черное Море">
-  <h3>Черное Море</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
-</div>
-
-<div class="card">
-  <img src="3.jpg" alt="День в Спа">
-  <h3>День в Спа</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
-</div>
-
-<div class="card">
-  <img src="4.jpg" alt="Морская Соль и Орхидея">
-  <h3>Морская Соль и Орхидея</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div>
-</div>
-
-<div class="card">
-  <img src="5.jpg" alt="Кашемировая Слива">
-  <h3>Кашемировая Слива</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div>
-</div>
-
-<div class="card">
-  <img src="6.jpg" alt="Черная Вишня Мерло">
-  <h3>Черная Вишня Мерло</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div>
-</div>
-
-<div class="card">
-  <img src="7.jpg" alt="Манго и Кокосовое Молоко">
-  <h3>Манго и Кокосовое Молоко</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div>
-</div>
-
-<div class="card">
-  <img src="8.jpg" alt="Библиотека">
-  <h3>Библиотека</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div>
-</div>
-
-<div class="card">
-  <img src="9.jpg" alt="Коньячная Груша">
-  <h3>Коньячная Груша</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Тёплый фруктовый аромат с оттенком коньяка и специй.</div>
-</div>
-
-<div class="card">
-  <img src="10.jpg" alt="Бананово-ореховый Хлеб">
-  <h3>Бананово-ореховый Хлеб</h3>
-  <p>220 мл — 1500 ₽</p>
-  <p>500 мл — 3000 ₽</p>
-  <button onclick="toggleInfo(this)">Подробнее</button>
-  <div class="hidden">Домашний аромат свежей выпечки с бананом и грецким орехом.</div>
-</div>
+      <div class="card"><img src="1.jpg" alt="Дубовый Мох и Янтарь"><h3>Дубовый Мох и Янтарь</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div></div>
+      <div class="card"><img src="2.jpg" alt="Черное Море"><h3>Черное Море</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div></div>
+      <div class="card"><img src="3.jpg" alt="День в Спа"><h3>День в Спа</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div></div>
+      <div class="card"><img src="4.jpg" alt="Морская Соль и Орхидея"><h3>Морская Соль и Орхидея</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div></div>
+      <div class="card"><img src="5.jpg" alt="Кашемировая Слива"><h3>Кашемировая Слива</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div></div>
+      <div class="card"><img src="6.jpg" alt="Черная Вишня Мерло"><h3>Черная Вишня Мерло</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div></div>
+      <div class="card"><img src="7.jpg" alt="Манго и Кокосовое Молоко"><h3>Манго и Кокосовое Молоко</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div></div>
+      <div class="card"><img src="8.jpg" alt="Библиотека"><h3>Библиотека</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div></div>
+      <div class="card"><img src="9.jpg" alt="Коньячная Груша"><h3>Коньячная Груша</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Тёплый фруктовый аромат с оттенком коньяка и специй.</div></div>
+      <div class="card"><img src="10.jpg" alt="Бананово-ореховый Хлеб"><h3>Бананово-ореховый Хлеб</h3><p>220 мл — 1500 ₽</p><p>500 мл — 3000 ₽</p><button onclick="toggleInfo(this)">Подробнее</button><div class="hidden">Домашний аромат свежей выпечки с бананом и грецким орехом.</div></div>
     </div>
   </section>
 
@@ -282,6 +176,7 @@ nav a:hover {
     <p>
       Maison de Lumière — это пространство, где свет встречается с ароматом, а каждый момент наполняется смыслом.
       Мы создаём свечи как произведения искусства: с благородными нотами, изысканным дизайном и вниманием к деталям.
+      Это не просто аромат — это атмосфера, которая говорит о вкусе, внутренней гармонии и стремлении к красоте.
     </p>
   </section>
 
@@ -291,6 +186,7 @@ nav a:hover {
       Все свечи доступны в подарочной упаковке: плотная коробка с шелковой лентой и открыткой.
       Вы можете добавить персональную надпись — мы напечатаем её вручную на карточке.
     </p>
+    <p><strong>Персонализация:</strong> имя, пожелание, дата — всё, что сделает подарок личным.</p>
   </section>
 
   <section id="shipping">
@@ -314,4 +210,24 @@ nav a:hover {
       <input type="text" placeholder="Ваше имя" required>
       <input type="email" placeholder="Email" required>
       <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
-      <button type="submit">Отправить</
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Maison de Lumière — свет как искусство
+  </footer>
+
+  <script>
+    function toggleInfo(button) {
+      const info = button.nextElementSibling;
+      info.style.display = info.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function submitForm() {
+      alert("Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.");
+      return false;
+    }
+  </script>
+</body>
+</html>
