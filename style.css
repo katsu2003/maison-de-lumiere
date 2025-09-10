@@ -126,8 +126,11 @@ h2 {
 
 .card img {
   width: 100%;
+  height: 250px;           /* фиксированная высота */
+  object-fit: cover;       /* обрезка по краям, чтобы заполнить блок */
   border-radius: 8px;
   margin-bottom: 10px;
+  display: block;
 }
 
 .hidden {
