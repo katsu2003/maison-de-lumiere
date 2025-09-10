@@ -12,22 +12,24 @@ body {
 /* Шапка бренда (статичная) */
 header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 40px; /* больше воздуха сверху и снизу */
   background-color: #fffdfa;
+  border-bottom: 1px solid #e5ddd5; /* тонкая линия для отделения от контента */
 }
 
 header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-family: 'Playfair Display', serif; /* твой шрифт */
+  font-size: 42px; /* чуть крупнее для солидности */
   color: #5c3a3a;
-  margin-bottom: 10px;
+  margin: 0 0 12px 0; /* отступ снизу до слогана */
+  letter-spacing: 1px; /* лёгкое разрежение букв */
 }
 
 .tagline {
   font-style: italic;
-  color: #3b2f2f;
-  font-size: 14px;
-  margin-bottom: 20px;
+  color: #7a5f5f;
+  font-size: 16px;
+  margin: 0;
 }
 
 /* Навигация — стоит прямо под шапкой, прилипает при скролле */
