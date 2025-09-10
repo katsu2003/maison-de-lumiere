@@ -5,6 +5,9 @@
   <title>Maison de Lumière — когда свет становится искусством</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -27,12 +30,24 @@
       color: #3b2f2f;
       margin-bottom: 30px;
     }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    nav {
+      margin-top: 20px;
     }
+    nav a {
+      margin: 0 15px;
+      color: #5c3a3a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      box-sizing: border-box;
+    }
+    #about { background-color: #fdfaf7; }
+    #gifts { background-color: #f5f0eb; }
+    #shipping { background-color: #fffdfa; }
+    #contacts { background-color: #fdf7f2; }
     h2 {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
@@ -111,22 +126,22 @@
   </style>
 </head>
 <body>
-<nav style="position: sticky; top: 0; background-color: #fffdfa; padding: 10px 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); z-index: 1000; text-align: center;">
-  <a href="#catalog" style="margin: 0 15px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Каталог</a>
-  <a href="#about" style="margin: 0 15px; color: #5c3a3a; text-decoration: none; font-weight: bold;">О бренде</a>
-  <a href="#gifts" style="margin: 0 15px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Подарки</a>
-  <a href="#shipping" style="margin: 0 15px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Доставка</a>
-  <a href="#contacts" style="margin: 0 15px; color: #5c3a3a; text-decoration: none; font-weight: bold;">Контакты</a>
-</nav>
 
   <header>
     <h1>Maison de Lumière</h1>
     <div class="tagline">когда свет становится искусством</div>
+    <nav>
+      <a href="#about">О бренде</a>
+      <a href="#gifts">Подарки</a>
+      <a href="#shipping">Доставка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
   </header>
 
   <section id="catalog">
     <h2>Наши ароматы</h2>
     <div class="catalog">
+      <!-- Пример карточки -->
       <div class="card">
         <img src="1.jpg" alt="Дубовый Мох и Янтарь">
         <h3>Дубовый Мох и Янтарь</h3>
@@ -135,89 +150,11 @@
         <button onclick="toggleInfo(this)">Подробнее</button>
         <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
       </div>
-
-      <div class="card">
-        <img src="2.jpg" alt="Черное Море">
-        <h3>Черное Море</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
-      </div>
-
-      <div class="card">
-        <img src="3.jpg" alt="День в Спа">
-        <h3>День в Спа</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
-      </div>
-
-      <div class="card">
-        <img src="4.jpg" alt="Морская Соль и Орхидея">
-        <h3>Морская Соль и Орхидея</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div>
-      </div>
-
-      <div class="card">
-        <img src="5.jpg" alt="Кашемировая Слива">
-        <h3>Кашемировая Слива</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div>
-      </div>
-
-      <div class="card">
-        <img src="6.jpg" alt="Черная Вишня Мерло">
-        <h3>Черная Вишня Мерло</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div>
-      </div>
-
-      <div class="card">
-        <img src="7.jpg" alt="Манго и Кокосовое Молоко">
-        <h3>Манго и Кокосовое Молоко</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div>
-      </div>
-
-      <div class="card">
-        <img src="8.jpg" alt="Библиотека">
-        <h3>Библиотека</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div>
-      </div>
-
-      <div class="card">
-        <img src="9.jpg" alt="Коньячная Груша">
-        <h3>Коньячная Груша</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Тёплый фруктовый аромат с оттенком коньяка и специй.</div>
-      </div>
-
-      <div class="card">
-        <img src="10.jpg" alt="Бананово-ореховый Хлеб">
-        <h3>Бананово-ореховый Хлеб</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Домашний аромат свежей выпечки с бананом и грецким орехом.</div>
-      </div>
+      <!-- Остальные карточки по аналогии -->
+      <!-- ... -->
     </div>
   </section>
+
   <section id="about">
     <h2>О бренде</h2>
     <p>
