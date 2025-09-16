@@ -12,23 +12,22 @@ body {
 /* Шапка бренда (статичная) */
 header {
   text-align: center;
-  padding: 60px 20px 40px; /* больше воздуха сверху и снизу */
+  padding: 30px 20px 16px;
   background-color: #fffdfa;
-  border-bottom: 1px solid #e5ddd5; /* тонкая линия для отделения от контента */
+  border-bottom: 1px solid #e5ddd5;
 }
 
 header h1 {
-  font-family: 'Playfair Display', serif; /* твой шрифт */
-  font-size: 42px; /* чуть крупнее для солидности */
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
   color: #5c3a3a;
-  margin: 0 0 12px 0; /* отступ снизу до слогана */
-  letter-spacing: 1px; /* лёгкое разрежение букв */
+  margin: 0 0 8px 0;
 }
 
 .tagline {
   font-style: italic;
   color: #7a5f5f;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -40,6 +39,8 @@ nav {
   background-color: #fffdfa;
   padding: 12px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-top: 1px solid #e5ddd5; /* добавляем верхнюю полоску */
+  border-bottom: 1px solid #e5ddd5; /* добавляем нижнюю полоску */
   z-index: 1000;
   text-align: center;
 }
