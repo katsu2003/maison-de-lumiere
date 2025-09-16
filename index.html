@@ -14,114 +14,130 @@
   </header>
 
   <nav>
-    <a href="#catalog">Каталог</a>
-    <a href="#about">О бренде</a>
-    <a href="#gifts">Подарки</a>
-    <a href="#shipping">Доставка</a>
-    <a href="#contacts">Контакты</a>
+    <div class="nav-container">
+      <div class="burger" onclick="toggleMenu()">☰</div>
+      <div class="links">
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О бренде</a>
+        <a href="#gifts">Подарки</a>
+        <a href="#shipping">Доставка</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
   </nav>
 
   <section id="catalog">
-    <h2>Наши ароматы</h2>
-    <div class="catalog">
-      <div class="card">
-        <img src="1.jpg" alt="Дубовый Мох и Янтарь">
-        <h3>Дубовый Мох и Янтарь</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
-      </div>
+  <h2>Наши ароматы</h2>
+  <div class="catalog">
 
-      <div class="card">
-        <img src="2.jpg" alt="Черное Море">
-        <h3>Чёрное Море</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
-      </div>
-
-      <div class="card">
-        <img src="3.jpg" alt="День в Спа">
-        <h3>День в Спа</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
-      </div>
-
-      <div class="card">
-        <img src="4.jpg" alt="Морская Соль и Орхидея">
-        <h3>Морская Соль и Орхидея</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div>
-      </div>
-
-      <div class="card">
-        <img src="5.jpg" alt="Кашемировая Слива">
-        <h3>Кашемировая Слива</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div>
-      </div>
-
-      <div class="card">
-        <img src="6.jpg" alt="Черная Вишня Мерло">
-        <h3>Чёрная Вишня Мерло</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div>
-      </div>
-
-      <div class="card">
-        <img src="7.jpg" alt="Манго и Кокосовое Молоко">
-        <h3>Манго и Кокосовое Молоко</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div>
-      </div>
-
-      <div class="card">
-        <img src="8.jpg" alt="Библиотека">
-        <h3>Библиотека</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div>
-      </div>
-
-      <div class="card">
-        <img src="9.jpg" alt="Коньячная Груша">
-        <h3>Коньячная Груша</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Тёплый фруктовый аромат с оттенком коньяка и специй.</div>
-      </div>
-
-      <div class="card">
-        <img src="10.jpg" alt="Бананово-ореховый Хлеб">
-        <h3>Бананово-ореховый Хлеб</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button onclick="toggleInfo(this)">Подробнее</button>
-        <div class="hidden">Домашний аромат свежей выпечки с бананом и грецким орехом.</div>
-      </div>
+    <div class="card">
+      <img src="1.jpg" alt="Дубовый Мох и Янтарь">
+      <h3>Дубовый Мох и Янтарь</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="2.jpg" alt="Чёрное Море">
+      <h3>Чёрное Море</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
+    </div>
+
+    <div class="card">
+      <img src="3.jpg" alt="День в Спа">
+      <h3>День в Спа</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
+    </div>
+
+    <div class="card">
+      <img src="4.jpg" alt="Морская Соль и Орхидея">
+      <h3>Морская Соль и Орхидея</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div>
+    </div>
+
+    <div class="card">
+      <img src="5.jpg" alt="Кашемировая Слива">
+      <h3>Кашемировая Слива</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div>
+    </div>
+
+    <div class="card">
+      <img src="6.jpg" alt="Чёрная Вишня Мерло">
+      <h3>Чёрная Вишня Мерло</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div>
+    </div>
+
+    <div class="card">
+      <img src="7.jpg" alt="Манго и Кокосовое Молоко">
+      <h3>Манго и Кокосовое Молоко</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div>
+    </div>
+
+    <div class="card">
+      <img src="8.jpg" alt="Библиотека">
+      <h3>Библиотека</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div>
+    </div>
+
+    <div class="card">
+      <img src="9.jpg" alt="Коньячная Груша">
+      <h3>Коньячная Груша</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Тёплый фруктовый аромат с оттенком коньяка и специй.</div>
+    </div>
+
+    <div class="card">
+      <img src="10.jpg" alt="Бананово-ореховый Хлеб">
+      <h3>Бананово-ореховый Хлеб</h3>
+      <p>220 мл — 1500 ₽</p>
+      <p>500 мл — 3000 ₽</p>
+      <button onclick="toggleInfo(this)">Подробнее</button>
+      <button class="order-btn">Заказать</button>
+      <div class="hidden">Домашний аромат свежей выпечки с бананом и грецким орехом.</div>
+    </div>
+
+  </div>
+</section>
 
   <section id="about">
     <h2>О бренде</h2>
     <p>
       Maison de Lumière — это пространство, где свет встречается с ароматом, а каждый момент наполняется смыслом.
       Мы создаём свечи как произведения искусства: с благородными нотами, изысканным дизайном и вниманием к деталям.
-      Это не просто аромат — это атмосфера, которая говорит о вкусе, внутренней гармонии и стремлении к красоте.
     </p>
   </section>
 
@@ -131,7 +147,6 @@
       Все свечи доступны в подарочной упаковке: плотная коробка с шелковой лентой и открыткой.
       Вы можете добавить персональную надпись — мы напечатаем её вручную на карточке.
     </p>
-    <p><strong>Персонализация:</strong> имя, пожелание, дата — всё, что сделает подарок личным.</p>
   </section>
 
   <section id="shipping">
@@ -172,6 +187,10 @@
     function submitForm() {
       alert("Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.");
       return false;
+    }
+
+    function toggleMenu() {
+      document.querySelector('.links').classList.toggle('active');
     }
   </script>
 </body>
