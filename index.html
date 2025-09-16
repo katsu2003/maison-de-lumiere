@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Maison de Lumière — когда свет становится искусством</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Подключение внешних стилей -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,94 +25,184 @@
     <h2>Наши ароматы</h2>
     <div class="catalog">
 
-      <div class="card">
-        <img src="1.jpg" alt="Дубовый Мох и Янтарь" onclick="toggleInfo(this)">
-        <h3>Дубовый Мох и Янтарь</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Тёплый древесный аромат с нотами янтаря и землистого мха.</div>
+      <!-- Карточка 1 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="1.jpg" alt="Дубовый Мох и Янтарь">
+            <h3>Дубовый Мох и Янтарь</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Тёплый древесный аромат с нотами янтаря и землистого мха.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="2.jpg" alt="Чёрное Море" onclick="toggleInfo(this)">
-        <h3>Чёрное Море</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Свежий морской бриз с солёными акцентами и глубиной.</div>
+      <!-- Карточка 2 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="2.jpg" alt="Чёрное Море">
+            <h3>Чёрное Море</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Свежий морской бриз с солёными акцентами и глубиной.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="3.jpg" alt="День в Спа" onclick="toggleInfo(this)">
-        <h3>День в Спа</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Чистый, расслабляющий аромат эвкалипта и лаванды.</div>
+      <!-- Карточка 3 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="3.jpg" alt="День в Спа">
+            <h3>День в Спа</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Чистый, расслабляющий аромат эвкалипта и лаванды.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="4.jpg" alt="Морская Соль и Орхидея" onclick="toggleInfo(this)">
-        <h3>Морская Соль и Орхидея</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Лёгкий цветочный аромат с солёной свежестью.</div>
+      <!-- Карточка 4 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="4.jpg" alt="Морская Соль и Орхидея">
+            <h3>Морская Соль и Орхидея</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Лёгкий цветочный аромат с солёной свежестью.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="5.jpg" alt="Кашемировая Слива" onclick="toggleInfo(this)">
-        <h3>Кашемировая Слива</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Фруктовый, мягкий аромат с бархатной сливой и мускусом.</div>
+      <!-- Карточка 5 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="5.jpg" alt="Кашемировая Слива">
+            <h3>Кашемировая Слива</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Фруктовый, мягкий аромат с бархатной сливой и мускусом.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="6.jpg" alt="Чёрная Вишня Мерло" onclick="toggleInfo(this)">
-        <h3>Чёрная Вишня Мерло</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Глубокий винный аромат с нотами спелой вишни.</div>
+      <!-- Карточка 6 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="6.jpg" alt="Чёрная Вишня Мерло">
+            <h3>Чёрная Вишня Мерло</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Глубокий винный аромат с нотами спелой вишни.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="7.jpg" alt="Манго и Кокосовое Молоко" onclick="toggleInfo(this)">
-        <h3>Манго и Кокосовое Молоко</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Тропический, сладкий аромат с кремовой текстурой.</div>
+      <!-- Карточка 7 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="7.jpg" alt="Манго и Кокосовое Молоко">
+            <h3>Манго и Кокосовое Молоко</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Тропический, сладкий аромат с кремовой текстурой.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="8.jpg" alt="Библиотека" onclick="toggleInfo(this)">
-        <h3>Библиотека</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Ноты старой бумаги, кожи и дерева — уют и тишина.</div>
+      <!-- Карточка 8 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="8.jpg" alt="Библиотека">
+            <h3>Библиотека</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Ноты старой бумаги, кожи и дерева — уют и тишина.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="9.jpg" alt="Коньячная Груша" onclick="toggleInfo(this)">
-        <h3>Коньячная Груша</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Тёплый фруктовый аромат с оттенком коньяка и специй.</div>
+      <!-- Карточка 9 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="9.jpg" alt="Коньячная Груша">
+            <h3>Коньячная Груша</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Тёплый фруктовый аромат с оттенком коньяка и специй.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="10.jpg" alt="Бананово-ореховый Хлеб" onclick="toggleInfo(this)">
-        <h3>Бананово-ореховый Хлеб</h3>
-        <p>220 мл — 1500 ₽</p>
-        <p>500 мл — 3000 ₽</p>
-        <button class="order-btn">Заказать</button>
-        <div class="hidden">Домашний аромат свежей выпечки с бананом и грецким орехом.</div>
+      <!-- Карточка 10 -->
+      <div class="card" onclick="toggleFlip(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="10.jpg" alt="Бананово-ореховый Хлеб">
+            <h3>Бананово-ореховый Хлеб</h3>
+            <p>220 мл — 1500 ₽</p>
+            <p>500 мл — 3000 ₽</p>
+            <button class="order-btn" onclick="event.stopPropagation()">Заказать</button>
+          </div>
+          <div class="card-back">
+            <div class="description">
+              Домашний аромат свежей выпечки с бананом и грецким орехом.
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -122,7 +211,7 @@
   <section id="about">
     <h2>О бренде</h2>
     <p>
-      Maison de Lumière — это пространство, где свет встречается с ароматом, а каждый момент наполняется смыслом.
+      Maison de Lumière — это пространство, где свет встречается с ароматом, а каждый момент наполнен смыслом.
       Мы создаём свечи как произведения искусства: с благородными нотами, изысканным дизайном и вниманием к деталям.
     </p>
   </section>
@@ -165,16 +254,27 @@
   </footer>
 
   <script>
-    // Плавное раскрытие описания карточки по клику на фото
-    function toggleInfo(img) {
-      const card = img.closest('.card');
-      const info = card.querySelector('.hidden');
-      info.classList.toggle('show');
+    // плавный скролл с учётом header+nav
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        const offset = document.querySelector('header').offsetHeight
+                     + document.querySelector('nav').offsetHeight;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset + 10;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    // переворот карточки
+    function toggleFlip(card) {
+      card.classList.toggle('flipped');
     }
 
-    // Заглушка для формы
+    // заглушка формы
     function submitForm() {
-      alert("Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.");
+      alert('Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.');
       return false;
     }
   </script>
