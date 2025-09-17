@@ -1,18 +1,23 @@
-/* ====== Общие настройки ====== */
-html { scroll-behavior: smooth; }
-
+/* =====================================
+   Общие настройки
+   ===================================== */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #fdf6f0;
+  background-color: #fdf6f0;
   color: #3b3b3b;
 }
 
-/* ====== Хеддер ====== */
+/* =====================================
+   Хеддер
+   ===================================== */
 header {
   text-align: center;
   padding: 32px 20px 24px;
-  background: #fffdfa;
+  background-color: #fffdfa;
   border-bottom: 1px solid #e5ddd5;
 }
 header h1 {
@@ -28,11 +33,13 @@ header h1 {
   margin: 0;
 }
 
-/* ====== Навигация ====== */
+/* =====================================
+   Навигация
+   ===================================== */
 nav {
   position: sticky;
   top: 0;
-  background: #fffdfa;
+  background-color: #fffdfa;
   border-top: 1px solid #e5ddd5;
   border-bottom: 1px solid #e5ddd5;
   padding: 12px 0;
@@ -46,9 +53,13 @@ nav a {
   font-weight: bold;
   font-size: 15px;
 }
-nav a:hover { color: #a36c4f; }
+nav a:hover {
+  color: #a36c4f;
+}
 
-/* ====== Секции ====== */
+/* =====================================
+   Секции
+   ===================================== */
 section {
   scroll-margin-top: 90px;
   min-height: 100vh;
@@ -57,11 +68,11 @@ section {
   margin: 0 auto;
   box-sizing: border-box;
 }
-#catalog  { background: #fefcf9; }
-#about    { background: #fdfaf7; }
-#gifts    { background: #f5f0eb; }
-#shipping { background: #fffdfa; }
-#contacts { background: #fdf7f2; }
+#catalog  { background-color: #fefcf9; }
+#about    { background-color: #fdfaf7; }
+#gifts    { background-color: #f5f0eb; }
+#shipping { background-color: #fffdfa; }
+#contacts { background-color: #fdf7f2; }
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
@@ -69,22 +80,23 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* ====== Сетка карточек через Flexbox ====== */
+/* =====================================
+   Каталог: Grid-сетка
+   ===================================== */
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 24px;
   margin: 20px 0 40px;
 }
-.card {
-  flex: 1 1 calc(33.333% - 40px);
-  box-sizing: border-box;
-  perspective: 1000px;
-  margin-bottom: 20px;
-}
 
-/* 3D-переворот карточки */
+/* =====================================
+   Карточка 3D-переворот
+   ===================================== */
+.card {
+  perspective: 1000px;
+  position: relative;
+}
 .card-inner {
   position: relative;
   width: 100%;
@@ -94,20 +106,21 @@ h2 {
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
   top: 0; left: 0;
+  border-radius: 12px;
 }
 .card-front {
-  background: #fffaf7;
+  background-color: #fffaf7;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 .card-back {
   transform: rotateY(180deg);
-  background: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -134,12 +147,10 @@ h2 {
   margin: 4px 0;
   font-size: 14px;
 }
-
-/* Кнопка «Заказать» */
 .order-btn {
   display: block;
   margin: 12px auto 0;
-  background: #c89f7b;
+  background-color: #c89f7b;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -149,16 +160,20 @@ h2 {
   font-weight: 600;
   transition: background 0.25s ease;
 }
-.order-btn:hover { background: #a36c4f; }
+.order-btn:hover {
+  background-color: #a36c4f;
+}
 
-/* Описание на обратной стороне */
+/* Бэк-сторона карточки */
 .card-back .description {
   font-size: 14px;
   color: #3b2f2f;
   text-align: center;
 }
 
-/* ====== Форма обратной связи ====== */
+/* =====================================
+   Форма обратной связи
+   ===================================== */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -166,10 +181,10 @@ h2 {
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  background: #fffdfa;
+  background-color: #fffdfa;
 }
 .contact-form button {
-  background: #5c3a3a;
+  background-color: #5c3a3a;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -178,26 +193,44 @@ h2 {
   cursor: pointer;
   transition: background 0.25s ease;
 }
-.contact-form button:hover { background: #6e4a4a; }
+.contact-form button:hover {
+  background-color: #6e4a4a;
+}
 
-/* ====== Подвал ====== */
+/* =====================================
+   Подвал
+   ===================================== */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background: #fffdfa;
+  background-color: #fffdfa;
   color: #3b2f2f;
   font-size: 14px;
   border-top: 1px solid #e5ddd5;
 }
 
-/* ====== Адаптив ====== */
+/* =====================================
+   Адаптив
+   ===================================== */
 @media (max-width: 1024px) {
-  .card { flex: 1 1 calc(50% - 40px); }
+  .catalog {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 20px;
+  }
 }
 @media (max-width: 600px) {
-  .card { flex: 1 1 100%; }
-  header h1 { font-size: 30px; }
-  .tagline     { font-size: 14px; }
-  nav a        { margin: 6px 10px; font-size: 14px; }
-  .card-front img { height: 220px; }
+  .catalog {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  header h1 {
+    font-size: 30px;
+  }
+  .tagline {
+    font-size: 14px;
+  }
+  nav a {
+    margin: 6px 10px;
+    font-size: 14px;
+  }
 }
