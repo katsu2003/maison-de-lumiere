@@ -79,17 +79,20 @@ h2 {
 /* ====== Каталог: 3 в ряд ====== */
 .catalog {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд на десктопе */
   gap: 28px;
   margin: 20px 0 40px;
 }
 
 /* ====== Карточка с 3D-переворотом ====== */
 .card {
-  position: relative;
-  height: 430px;
-  perspective: 1000px;
+  background: #fffaf7;
+  border: 1px solid #e5ddd5;
   border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-align: center;
+  padding: 16px;
 }
 .card-inner {
   position: relative;
@@ -124,12 +127,12 @@ h2 {
 /* Контент лицевой стороны */
 .card-front img {
   width: 100%;
-  height: 220px;       /* фиксированная высота для всех фото */
-  object-fit: cover;   /* фото заполняет блок без искажений */
-  object-position: center; /* центрируем изображение */
+  height: 220px;        /* фиксированная высота */
+  object-fit: contain;  /* фото полностью помещается */
+  background: #fdf6f0;  /* фон под картинкой */
   border-radius: 8px;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 .card-front h3 {
   margin: 12px 16px 6px;
@@ -198,13 +201,13 @@ footer {
 
 /* ====== Адаптив ====== */
 @media (max-width: 1024px) {
-  .catalog { grid-template-columns: repeat(2, 1fr); }
-  .card { height: auto; }
+  .catalog {
+    grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд на планшете */
+  }
 }
+
 @media (max-width: 600px) {
-  .catalog { grid-template-columns: 1fr; }
-  .card { height: auto; }
-  header h1 { font-size: 30px; }
-  .tagline { font-size: 14px; }
-  nav a { margin: 6px 10px; font-size: 14px; }
+  .catalog {
+    grid-template-columns: 1fr; /* 1 карточка в ряд на телефоне */
+  }
 }
