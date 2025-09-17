@@ -262,7 +262,7 @@
         const target = document.getElementById(id);
         const offset = document.querySelector('header').offsetHeight
                      + document.querySelector('nav').offsetHeight;
-        const top = target.getBoundingClientRect().top + window.pageYOffset - offset + 10;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset + 40;
         window.scrollTo({ top, behavior: 'smooth' });
       });
     });
