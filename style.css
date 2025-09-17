@@ -1,19 +1,23 @@
-/* базовый сброс и шрифты */
-html { scroll-behavior: smooth; }
+/* Базовые настройки */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #fdf6f0;
+  background-color: #fdf6f0;
   color: #3b3b3b;
 }
 
-/* HEADER */
+/* Хеддер */
 header {
   text-align: center;
   padding: 32px 20px 24px;
-  background: #fffdfa;
+  background-color: #fffdfa;
   border-bottom: 1px solid #e5ddd5;
 }
+
 header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
@@ -21,6 +25,7 @@ header h1 {
   margin: 0 0 8px;
   letter-spacing: 0.5px;
 }
+
 .tagline {
   font-style: italic;
   color: #7a5f5f;
@@ -28,17 +33,18 @@ header h1 {
   margin: 0;
 }
 
-/* NAVIGATION */
+/* Навигация */
 nav {
   position: sticky;
   top: 0;
-  background: #fffdfa;
+  background-color: #fffdfa;
   border-top: 1px solid #e5ddd5;
   border-bottom: 1px solid #e5ddd5;
   padding: 12px 0;
   text-align: center;
   z-index: 1000;
 }
+
 nav a {
   margin: 0 14px;
   color: #5c3a3a;
@@ -46,24 +52,41 @@ nav a {
   font-weight: bold;
   font-size: 15px;
 }
+
 nav a:hover {
   color: #a36c4f;
 }
 
-/* SECTIONS */
+/* Секции */
 section {
   scroll-margin-top: 90px;
   min-height: 100vh;
   padding: 60px 20px;
+  box-sizing: border-box;
   max-width: 900px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
-#catalog { background: #fefcf9; }
-#about   { background: #fdfaf7; }
-#gifts   { background: #f5f0eb; }
-#shipping{ background: #fffdfa; }
-#contacts{ background: #fdf7f2; }
+
+#catalog {
+  background-color: #fefcf9;
+}
+
+#about {
+  background-color: #fdfaf7;
+}
+
+#gifts {
+  background-color: #f5f0eb;
+}
+
+#shipping {
+  background-color: #fffdfa;
+}
+
+#contacts {
+  background-color: #fdf7f2;
+}
+
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
@@ -71,60 +94,49 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* CATALOG GRID */
+/* Сетка карточек: 3 в ряд */
 .catalog {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* три колонки одинаковой ширины */
-  gap: 40px;                             /* пространство и по горизонтали, и по вертикали */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   margin-top: 20px;
-  margin-bottom: 20px;
-}
-/* Адаптивность: 2 в ряд на планшете */
-@media (max-width: 1024px) {
-  .catalog {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
+  margin-bottom: 40px;
 }
 
-/* 1 в ряд на телефоне */
-@media (max-width: 600px) {
-  .catalog {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-/* CARD 3D FLIP */
+/* Карточка с 3D-переворотом */
 .card {
   perspective: 1000px;
 }
+
 .card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
+
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
-/* front & back faces */
-.card-front, .card-back {
+
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
-  height: 100%;
   backface-visibility: hidden;
   top: 0;
   left: 0;
   border-radius: 12px;
 }
+
 .card-front {
-  background: #fffaf7;
+  background-color: #fffaf7;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
 .card-back {
   transform: rotateY(180deg);
-  background: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -133,90 +145,9 @@ h2 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* FRONT CONTENT */
+/* Контент лицевой стороны */
 .card-front img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-.card-front h3 {
-  margin: 8px 0 4px;
-  font-size: 18px;
-  color: #3b2f2f;
-}
-.card-front p {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #3b3b3b;
-}
-
-/* ORDER BUTTON */
-.order-btn {
-  display: block;
-  margin: 12px auto 0;
-  background: #c89f7b;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  transition: background 0.25s ease;
-}
-.order-btn:hover {
-  background: #a36c4f;
-}
-
-/* BACK DESCRIPTION */
-.card-back .description {
-  font-size: 14px;
-  color: #3b2f2f;
-  text-align: center;
-}
-
-/* FORM */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fffdfa;
-}
-.contact-form button {
-  background: #5c3a3a;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.25s ease;
-}
-.contact-form button:hover {
-  background: #6e4a4a;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #fffdfa;
-  color: #3b2f2f;
-  font-size: 14px;
-  border-top: 1px solid #e5ddd5;
-}
-
-/* MOBILE TWEAKS */
-@media (max-width: 768px) {
-  header h1 { font-size: 30px; }
-  .tagline   { font-size: 14px; }
-  nav a      { margin: 6px 10px; font-size: 14px; }
-  .card-front img { height: 220px; }
-}
+  border-radius
