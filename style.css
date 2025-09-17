@@ -51,7 +51,7 @@ nav a:hover { color: #a36c4f; }
 section {
   scroll-margin-top: 90px;
   padding: 60px 20px;
-  max-width: 1100px; /* шире контейнер, чтобы влезали 3 карточки комфортно */
+  max-width: 1100px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -67,6 +67,15 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* ====== Полноэкранные секции ====== */
+.fullscreen {
+  width: 100%;
+  min-height: 100vh;   /* занимает всю высоту экрана */
+  max-width: none;     /* убираем ограничение */
+  margin: 0;
+  padding: 80px 40px;
+}
+
 /* ====== Каталог: 3 в ряд ====== */
 .catalog {
   display: grid;
@@ -78,35 +87,30 @@ h2 {
 /* ====== Карточка с 3D-переворотом ====== */
 .card {
   position: relative;
-  height: 430px;       /* ВАЖНО: задаём высоту карточки */
+  height: 430px;
   perspective: 1000px;
-  border-radius: 12px; /* общий радиус для ровных краёв */
+  border-radius: 12px;
 }
-
 .card-inner {
   position: relative;
   width: 100%;
-  height: 100%;        /* ВАЖНО: растягиваем на высоту карточки */
+  height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
-
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
-
-/* Лицевая и обратная стороны */
 .card-front,
 .card-back {
   position: absolute;
-  inset: 0;            /* top:0; right:0; bottom:0; left:0 */
+  inset: 0;
   backface-visibility: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   background: #fffaf7;
   overflow: hidden;
 }
-
 .card-back {
   transform: rotateY(180deg);
   background: rgba(255,255,255,0.9);
@@ -120,9 +124,12 @@ h2 {
 /* Контент лицевой стороны */
 .card-front img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: 220px;       /* фиксированная высота для всех фото */
+  object-fit: cover;   /* фото заполняет блок без искажений */
+  object-position: center; /* центрируем изображение */
+  border-radius: 8px;
   display: block;
+  margin-bottom: 10px;
 }
 .card-front h3 {
   margin: 12px 16px 6px;
@@ -165,10 +172,10 @@ h2 {
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  background: #fffdfa;
+  background-color: #fffdfa;
 }
 .contact-form button {
-  background: #5c3a3a;
+  background-color: #5c3a3a;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -177,32 +184,27 @@ h2 {
   cursor: pointer;
   transition: background 0.25s ease;
 }
-.contact-form button:hover { background: #6e4a4a; }
+.contact-form button:hover { background-color: #6e4a4a; }
 
 /* ====== Подвал ====== */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background: #fffdfa;
+  background-color: #fffdfa;
   color: #3b2f2f;
   font-size: 14px;
   border-top: 1px solid #e5ddd5;
 }
 
 /* ====== Адаптив ====== */
-@media (max-width: 1100px) {
-  section { max-width: 1000px; }
-}
 @media (max-width: 1024px) {
   .catalog { grid-template-columns: repeat(2, 1fr); }
-  .card { height: 440px; }
+  .card { height: auto; }
 }
 @media (max-width: 600px) {
-  section { max-width: 540px; }
   .catalog { grid-template-columns: 1fr; }
-  .card { height: 420px; }
+  .card { height: auto; }
   header h1 { font-size: 30px; }
   .tagline { font-size: 14px; }
   nav a { margin: 6px 10px; font-size: 14px; }
-  .card-front img { height: 220px; }
 }
