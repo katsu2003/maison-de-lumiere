@@ -74,10 +74,26 @@ h2 {
 /* CATALOG GRID */
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* три колонки одинаковой ширины */
+  gap: 40px;                             /* пространство и по горизонтали, и по вертикали */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Адаптивность: 2 в ряд на планшете */
+@media (max-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
+/* 1 в ряд на телефоне */
+@media (max-width: 600px) {
+  .catalog {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 /* CARD 3D FLIP */
 .card {
   perspective: 1000px;
